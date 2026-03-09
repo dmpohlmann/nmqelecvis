@@ -17,5 +17,5 @@ Connect this repo to Netlify with:
 
 ## Data
 
-- Retail rates from Energy Made Easy (energymadeeasy.gov.au), Carindale 4034, March 2026
+- Retail rates from Energy Made Easy (energymadeeasy.gov.au), Carseldine 4034, March 2026
 - Consumption benchmarks from AER Residential Energy Consumption Benchmarks (2020), Climate Zone 2

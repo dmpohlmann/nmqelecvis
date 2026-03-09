@@ -126,7 +126,7 @@ export default function App() {
           <div className="sans" style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: "#6ee7a0", marginBottom: 10, fontWeight: 600 }}>Body Corporate Electricity Cost Analysis</div>
           <h1 style={{ fontSize: 30, fontWeight: 400, lineHeight: 1.25, margin: "0 0 12px", color: "#fff" }}>Is our embedded network saving owners money?</h1>
           <p className="sans" style={{ fontSize: 15, color: "#8a8aaa", margin: 0, lineHeight: 1.65, maxWidth: 660 }}>
-            Compare your current Altogether Group rates against every fixed-rate retail plan available on Energy Made Easy for Carindale, 4034. Select a provider and household size to explore.
+            Compare your current Altogether Group rates against every fixed-rate retail plan available on Energy Made Easy for Carseldine, 4034. Select a provider and household size to explore.
           </p>
         </div>
       </div>
@@ -290,7 +290,7 @@ export default function App() {
 
             <div style={{ marginBottom: 16 }}>
               <div style={{ color: "#ccc", fontWeight: 600, marginBottom: 4 }}>Data sources</div>
-              <div>Retail plan rates sourced from Energy Made Easy (energymadeeasy.gov.au) for Carindale, 4034 {"\u2013"} single rate plans, basic meter {"\u2013"} as at March 2026. Altogether Group rates taken from current owner billing: $0.89/day supply, $0.26/kWh usage. Consumption benchmarks derived from the AER Residential Energy Consumption Benchmarks (Frontier Economics, December 2020) for Climate Zone 2 (Brisbane), supplemented by Brisbane-specific estimates from multiple industry sources.</div>
+              <div>Retail plan rates sourced from Energy Made Easy (energymadeeasy.gov.au) for Carseldine, 4034 {"\u2013"} single rate plans, basic meter {"\u2013"} as at March 2026. Altogether Group rates taken from current owner billing: $0.89/day supply, $0.26/kWh usage. Consumption benchmarks derived from the AER Residential Energy Consumption Benchmarks (Frontier Economics, December 2020) for Climate Zone 2 (Brisbane), supplemented by Brisbane-specific estimates from multiple industry sources.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
