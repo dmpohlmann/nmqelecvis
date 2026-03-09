@@ -30,8 +30,8 @@ const HOUSEHOLDS = {
   "5+ people": { summer: 28, autumn: 23, winter: 24, spring: 21.5, annual: 24 },
 };
 
-function calcSeasonCost(p, kwh, days) { return p.supply * days + p.usage * kwh * days; }
-function calcAnnualCost(p, hh) { return SEASONS.reduce((s, sn) => s + calcSeasonCost(p, hh[sn.key], sn.days), 0); }
+function calcCost(p, kwh, days) { return p.supply * days + p.usage * kwh * days; }
+function calcAnnualCost(p, hh) { return SEASONS.reduce((s, sn) => s + calcCost(p, hh[sn.key], sn.days), 0); }
 const fmt = v => `$${v.toFixed(0)}`;
 const fmtC = v => `$${v.toFixed(2)}`;
 
