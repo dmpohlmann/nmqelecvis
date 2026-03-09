@@ -73,17 +73,39 @@ function ChartTooltip({ active, payload, label, providerColor }) {
   );
 }
 
+function ToggleButton({ options, value, onChange }) {
+  return (
+    <div style={{ display: "inline-flex", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 6, overflow: "hidden" }}>
+      {options.map(opt => (
+        <button key={opt.value} onClick={() => onChange(opt.value)} className="sans"
+          style={{ padding: "6px 14px", fontSize: 12, fontWeight: value === opt.value ? 700 : 400, background: value === opt.value ? "rgba(255,255,255,0.1)" : "transparent", color: value === opt.value ? "#fff" : "#666", border: "none", cursor: "pointer", transition: "all 0.15s" }}>
+          {opt.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function App() {
   const [selectedHH, setSelectedHH] = useState("2 people");
   const [selectedProvider, setSelectedProvider] = useState(PROVIDERS[1].name);
+  const [viewMode, setViewMode] = useState("monthly");
   const provider = PROVIDERS.find(p => p.name === selectedProvider);
   const hh = HOUSEHOLDS[selectedHH];
 
   const seasonData = useMemo(() => SEASONS.map(s => ({
     name: s.label,
-    altogether: calcSeasonCost(ALTOGETHER, hh[s.key], s.days),
-    provider: calcSeasonCost(provider, hh[s.key], s.days),
+    altogether: calcCost(ALTOGETHER, hh[s.key], s.days),
+    provider: calcCost(provider, hh[s.key], s.days),
   })), [selectedHH, selectedProvider]);
+
+  const monthlyData = useMemo(() => MONTHS.map(m => ({
+    name: m.label,
+    altogether: calcCost(ALTOGETHER, hh[m.season], m.days),
+    provider: calcCost(provider, hh[m.season], m.days),
+  })), [selectedHH, selectedProvider]);
+
+  const chartData = viewMode === "monthly" ? monthlyData : seasonData;
 
   const annualAlt = calcAnnualCost(ALTOGETHER, hh);
   const annualProv = calcAnnualCost(provider, hh);
