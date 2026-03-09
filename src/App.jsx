@@ -325,7 +325,7 @@ export default function App() {
 
             <div style={{ marginBottom: 16 }}>
               <div style={{ color: "#ccc", fontWeight: 600, marginBottom: 4 }}>Seasonal profile</div>
-              <div>Queensland{"\u2019"}s seasonal electricity pattern differs from southern states. Consumption peaks in summer (air conditioning) rather than winter. The seasonal adjustment applied is approximately +15% in summer and {"\u2212"}10% in spring relative to the annual average, with autumn and winter close to the annual figure. These are estimates based on published AER data and industry benchmarks for Climate Zone 2.</div>
+              <div>Queensland{"\u2019"}s seasonal electricity pattern differs from southern states. Consumption peaks in summer (air conditioning) rather than winter. The seasonal adjustment applied is approximately +15% in summer and {"\u2212"}10% in spring relative to the annual average, with autumn and winter close to the annual figure. These are estimates based on published AER data and industry benchmarks for Climate Zone 2. Monthly costs use the seasonal kWh/day rate for that month{"\u2019"}s season, multiplied by the actual days in the month.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
