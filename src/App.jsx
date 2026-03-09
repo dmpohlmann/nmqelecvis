@@ -160,30 +160,41 @@ export default function App() {
           <div style={{ background: "rgba(34,128,90,0.12)", border: "1px solid rgba(34,128,90,0.3)", borderRadius: 12, padding: 20 }}>
             <div className="sans" style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: 1.5, color: "#4ade80", marginBottom: 6, fontWeight: 600 }}>Altogether / year</div>
             <div style={{ fontSize: 30, fontWeight: 300, color: "#fff" }}>{fmt(annualAlt)}</div>
-            <div className="sans" style={{ fontSize: 11, color: "#666", marginTop: 4 }}>{(annualAlt / 365).toFixed(2)}/day</div>
+            <div className="sans" style={{ fontSize: 11, color: "#666", marginTop: 4 }}>{fmt(annualAlt / 12)}/month</div>
           </div>
           <div style={{ background: `${provider.color}15`, border: `1px solid ${provider.color}40`, borderRadius: 12, padding: 20 }}>
             <div className="sans" style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: 1.5, color: provider.color, marginBottom: 6, fontWeight: 600 }}>
               {provider.name.length > 22 ? provider.name.substring(0, 22) + "\u2026" : provider.name} / year
             </div>
             <div style={{ fontSize: 30, fontWeight: 300, color: "#fff" }}>{fmt(annualProv)}</div>
-            <div className="sans" style={{ fontSize: 11, color: "#666", marginTop: 4 }}>{(annualProv / 365).toFixed(2)}/day</div>
+            <div className="sans" style={{ fontSize: 11, color: "#666", marginTop: 4 }}>{fmt(annualProv / 12)}/month</div>
           </div>
           <div style={{ background: "rgba(74,222,128,0.08)", border: "1px solid rgba(74,222,128,0.25)", borderRadius: 12, padding: 20 }}>
             <div className="sans" style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: 1.5, color: "#4ade80", marginBottom: 6, fontWeight: 600 }}>You save with Altogether</div>
             <div style={{ fontSize: 30, fontWeight: 300, color: "#4ade80" }}>{fmt(annualSaving)}</div>
-            <div className="sans" style={{ fontSize: 11, color: "#666", marginTop: 4 }}>{fmt(annualSaving / 4)}/quarter</div>
+            <div className="sans" style={{ fontSize: 11, color: "#666", marginTop: 4 }}>{fmt(annualSaving / 12)}/month</div>
           </div>
         </div>
 
-        {/* Seasonal chart */}
+        {/* Cost chart with view toggle */}
         <div style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 14, padding: "28px 20px 16px", marginBottom: 32 }}>
-          <div style={{ fontSize: 17, color: "#fff", marginBottom: 2 }}>Quarterly cost by season</div>
-          <div className="sans" style={{ fontSize: 12, color: "#555", marginBottom: 24 }}>{selectedHH} household · SE Queensland average consumption</div>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 2 }}>
+            <div>
+              <div style={{ fontSize: 17, color: "#fff", marginBottom: 2 }}>
+                {viewMode === "monthly" ? "Monthly cost" : "Quarterly cost by season"}
+              </div>
+              <div className="sans" style={{ fontSize: 12, color: "#555", marginBottom: 24 }}>{selectedHH} household · SE Queensland average consumption</div>
+            </div>
+            <ToggleButton
+              options={[{ label: "Monthly", value: "monthly" }, { label: "Quarterly", value: "quarterly" }]}
+              value={viewMode}
+              onChange={setViewMode}
+            />
+          </div>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={seasonData} barGap={6} barCategoryGap="22%">
+            <BarChart data={chartData} barGap={viewMode === "monthly" ? 2 : 6} barCategoryGap={viewMode === "monthly" ? "12%" : "22%"}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
-              <XAxis dataKey="name" tick={{ fill: "#888", fontSize: 13 }} axisLine={{ stroke: "rgba(255,255,255,0.08)" }} tickLine={false} />
+              <XAxis dataKey="name" tick={{ fill: "#888", fontSize: viewMode === "monthly" ? 11 : 13 }} axisLine={{ stroke: "rgba(255,255,255,0.08)" }} tickLine={false} />
               <YAxis tick={{ fill: "#555", fontSize: 12 }} axisLine={false} tickLine={false} tickFormatter={v => `$${v}`} domain={[0, "auto"]} />
               <Tooltip content={<ChartTooltip providerColor={provider.color} />} cursor={{ fill: "rgba(255,255,255,0.02)" }} />
               <Bar dataKey="altogether" name="Altogether Group" fill={ALTOGETHER.color} radius={[5, 5, 0, 0]} />
