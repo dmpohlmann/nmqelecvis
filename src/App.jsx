@@ -22,6 +22,22 @@ const SEASONS = [
   { key: "spring", label: "Spring", days: 92 },
 ];
 
+// Each month mapped to its season and number of days
+const MONTHS = [
+  { label: "Jan", season: "summer", days: 31 },
+  { label: "Feb", season: "summer", days: 28 },
+  { label: "Mar", season: "autumn", days: 31 },
+  { label: "Apr", season: "autumn", days: 30 },
+  { label: "May", season: "autumn", days: 31 },
+  { label: "Jun", season: "winter", days: 30 },
+  { label: "Jul", season: "winter", days: 31 },
+  { label: "Aug", season: "winter", days: 31 },
+  { label: "Sep", season: "spring", days: 30 },
+  { label: "Oct", season: "spring", days: 31 },
+  { label: "Nov", season: "spring", days: 30 },
+  { label: "Dec", season: "summer", days: 31 },
+];
+
 const HOUSEHOLDS = {
   "1 person": { summer: 11, autumn: 9, winter: 9.5, spring: 8.5, annual: 9.5 },
   "2 people": { summer: 16.5, autumn: 13.5, winter: 14, spring: 12.5, annual: 14 },
