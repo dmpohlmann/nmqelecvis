@@ -1,9 +1,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  font-family: Georgia, 'Palatino Linotype', serif;
+  font-family: 'Roboto', sans-serif;
   background: linear-gradient(180deg, #0F161C 0%, #141D26 100%);
   color: #F7F3EB;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
-.sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+.sans { font-family: 'Roboto', sans-serif; }
