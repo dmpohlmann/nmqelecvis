@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npx vite --host)",
+      "Bash(npx vite build)",
+      "Bash(node -e \"console.log\\(''hello''\\)\")",
+      "Bash(dir C:Usersdavidrepositoriesnmqelecvispackage.json)"
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: Georgia, 'Palatino Linotype', serif;
-  background: linear-gradient(180deg, #0a0a18 0%, #0f1028 100%);
-  color: #e0e0e0;
+  background: linear-gradient(180deg, #0F161C 0%, #141D26 100%);
+  color: #F7F3EB;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
