@@ -285,16 +285,16 @@ export default function App() {
 
         {/* Assumptions & Caveats */}
         <div style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 14, padding: "24px 20px", marginBottom: 32 }}>
-          <div style={{ fontSize: 17, color: "#FFFDF5", marginBottom: 16 }}>Assumptions and caveats</div>
-          <div className="sans" style={{ fontSize: 13, color: "#9D9A9B", lineHeight: 1.75 }}>
+          <div style={{ fontSize: 19, color: "#FFFDF5", marginBottom: 16 }}>Assumptions and caveats</div>
+          <div className="sans" style={{ fontSize: 15, color: "#9D9A9B", lineHeight: 1.75 }}>
 
             <div style={{ marginBottom: 16 }}>
-              <div style={{ color: "#D4CFC5", fontWeight: 600, marginBottom: 4 }}>Data sources</div>
-              <div>Retail plan rates sourced from Energy Made Easy (energymadeeasy.gov.au) for Carseldine, 4034 {"\u2013"} single rate plans, basic meter {"\u2013"} as at March 2026. Altogether Group rates taken from current owner billing: $0.89/day supply, $0.26/kWh usage. Consumption benchmarks derived from the AER Residential Energy Consumption Benchmarks (Frontier Economics, December 2020) for Climate Zone 2 (Brisbane), supplemented by Brisbane-specific estimates from multiple industry sources.</div>
+              <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>Data sources</div>
+              <div>Retail plan rates sourced from Energy Made Easy (<a href="https://energymadeeasy.gov.au">energymadeeasy.gov.au</a>) for Carseldine, 4034 {"\u2013"} single rate plans, basic meter {"\u2013"} as at March 2026.<sup style={{ fontSize: 10, verticalAlign: "super", lineHeight: 0 }}>1</sup> Altogether Group rates taken from current owner billing: $0.89/day supply, $0.26/kWh usage. Consumption benchmarks derived from the AER Residential Energy Consumption Benchmarks (Frontier Economics, December 2020) for Climate Zone 2 (Brisbane), supplemented by Brisbane-specific estimates from multiple industry sources.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <div style={{ color: "#D4CFC5", fontWeight: 600, marginBottom: 4 }}>Average daily usage by household size (kWh/day)</div>
+              <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>Average daily usage by household size (kWh/day)</div>
               <div style={{ overflowX: "auto" }}>
                 <table style={{ borderCollapse: "collapse", fontSize: 12, marginTop: 8, width: "100%" }}>
                   <thead>
@@ -324,35 +324,41 @@ export default function App() {
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <div style={{ color: "#D4CFC5", fontWeight: 600, marginBottom: 4 }}>Seasonal profile</div>
+              <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>Seasonal profile</div>
               <div>Queensland{"\u2019"}s seasonal electricity pattern differs from southern states. Consumption peaks in summer (air conditioning) rather than winter. The seasonal adjustment applied is approximately +15% in summer and {"\u2212"}10% in spring relative to the annual average, with autumn and winter close to the annual figure. These are estimates based on published AER data and industry benchmarks for Climate Zone 2. Monthly costs use the seasonal kWh/day rate for that month{"\u2019"}s season, multiplied by the actual days in the month.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <div style={{ color: "#E4C071", fontWeight: 700, marginBottom: 4 }}>{"\u26A0"} Critical: bundled vs energy-only rates</div>
+              <div style={{ color: "#E4C071", fontSize: 17, fontWeight: 700, marginBottom: 4 }}>{"\u26A0"} Critical: bundled vs energy-only rates</div>
               <div>The retail plan rates shown here are <strong style={{ color: "#F7F3EB" }}>bundled rates</strong> {"\u2013"} they include both energy charges and network distribution charges as offered to standard grid-connected customers. If an owner were to switch from within the embedded network, they would <strong style={{ color: "#F7F3EB" }}>not</strong> pay the retailer{"\u2019"}s bundled rate. Instead, they would receive an {"\u201C"}energy only{"\u201D"} offer from the retailer <strong style={{ color: "#F7F3EB" }}>plus</strong> continue paying network charges to the body corporate (billed by Altogether at the regulated shadow price). This means the actual cost of switching is <strong style={{ color: "#F7F3EB" }}>higher</strong> than the retail figures shown in this comparison.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <div style={{ color: "#D4CFC5", fontWeight: 600, marginBottom: 4 }}>Additional costs of switching</div>
+              <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>Additional costs of switching</div>
               <div>Owners who switch may incur: a new meter installation fee (charged by the new retailer); a brief off-supply period during meter changeover; and ongoing receipt of two separate electricity bills. The cost to opt out of the embedded network is borne by the individual owner. Exit fees in Queensland are capped at $20, but metering and connection costs are separate and vary by retailer.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <div style={{ color: "#D4CFC5", fontWeight: 600, marginBottom: 4 }}>What this comparison excludes</div>
+              <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>What this comparison excludes</div>
               <div>Government rebates (including the 2025{"\u2013"}26 cost of living rebate), solar feed-in tariffs, conditional discounts (e.g. pay-on-time, direct debit), time-of-use tariff variations, demand tariffs, and any special pricing conditions attached to individual plans. Apartment electricity consumption is typically lower than detached house benchmarks due to smaller floor areas and shared walls {"\u2013"} actual savings may therefore differ from the estimates shown.</div>
             </div>
 
             <div>
-              <div style={{ color: "#D4CFC5", fontWeight: 600, marginBottom: 4 }}>Your rights</div>
+              <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>Your rights</div>
               <div>Under the National Energy Retail Law and the Electricity Act 1994 (Qld), all embedded network customers have the right to purchase electricity from an authorised retailer of their choice, provided that retailer is willing to make an offer. This analysis is provided to help owners make informed decisions {"\u2013"} it is not financial advice. For further information, visit <a href="https://www.energymadeeasy.gov.au" style={{ color: "#A8BFA8" }}>energymadeeasy.gov.au</a> or contact the AER on 1300 585 165.</div>
+            </div>
+            <div style={{ marginTop: 20, borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: 12, fontSize: 11, color: "#6B6866" }}>
+              <div><sup>1</sup> Data sourced directly from energymadeeasy.gov.au on 09{"\u2013"}Mar{"\u2013"}2026.</div>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="sans" style={{ fontSize: 11, color: "#414042", lineHeight: 1.6, textAlign: "center", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-          Prepared for the body corporate committee {"\u00b7"} Data as at March 2026 {"\u00b7"} Click any row in the table to compare that provider
+        <div className="sans" style={{ fontSize: 13, color: "#F7F3EB", lineHeight: 1.6, textAlign: "center", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+          Prepared for lot owners of Northmarque Carseldine (CTS 43944) {"\u00b7"} Data as at March 2026.
+        </div>
+        <div className="sans" style={{ fontSize: 13, color: "#F7F3EB", lineHeight: 1.6, textAlign: "center"  }}>
+          Errors and omissions excepted. {"\u00a9"} COPYRIGHT 2026. RogueAsset. All rights reserved.
         </div>
       </div>
     </div>
