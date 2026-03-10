@@ -126,7 +126,7 @@ export default function App() {
           <div className="sans" style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: "#A8BFA8", marginBottom: 10, fontWeight: 600 }}>Northmarque – Electricity cost analysis</div>
           <h1 style={{ fontSize: 30, fontWeight: 400, lineHeight: 1.25, margin: "0 0 12px", color: "#FFFDF5" }}>Is our embedded network saving owners money?</h1>
           <p className="sans" style={{ fontSize: 15, color: "#9D9A9B", margin: 0, lineHeight: 1.65, maxWidth: 660 }}>
-            Compare your current Altogether Group rates against the 10 next cheapest retail plans available on <a href="https://www.energymadeeasy.gov.au/">Energy Made Easy</a> for Carseldine, 4034. Select a provider and household size to explore.
+            Compare your current Altogether Group rates against the 10 next cheapest retail plans available on <a href="https://www.energymadeeasy.gov.au/" style={{ color: "#A8BFA8" }}>Energy Made Easy</a> for Carseldine, 4034. Select a provider and household size to explore.
           </p>
         </div>
       </div>
@@ -290,7 +290,7 @@ export default function App() {
 
             <div style={{ marginBottom: 16 }}>
               <div style={{ color: "#D4CFC5", fontSize: 17, fontWeight: 600, marginBottom: 4 }}>Data sources</div>
-              <div>Retail plan rates sourced from Energy Made Easy (<a href="https://energymadeeasy.gov.au">energymadeeasy.gov.au</a>) for Carseldine, 4034 {"\u2013"} single rate plans, basic meter {"\u2013"} as at March 2026.<sup style={{ fontSize: 10, verticalAlign: "super", lineHeight: 0 }}>1</sup> Altogether Group rates taken from current owner billing: $0.89/day supply, $0.26/kWh usage. Consumption benchmarks derived from the AER Residential Energy Consumption Benchmarks (Frontier Economics, December 2020) for Climate Zone 2 (Brisbane), supplemented by Brisbane-specific estimates from multiple industry sources.</div>
+              <div>Retail plan rates sourced from Energy Made Easy (<a href="https://energymadeeasy.gov.au" style={{ color: "#A8BFA8" }}>energymadeeasy.gov.au</a>) for Carseldine, 4034 {"\u2013"} single rate plans, basic meter {"\u2013"} as at March 2026.<sup style={{ fontSize: 10, verticalAlign: "super", lineHeight: 0 }}>1</sup> Altogether Group rates taken from current owner billing: $0.89/day supply, $0.26/kWh usage. Consumption benchmarks derived from the AER Residential Energy Consumption Benchmarks (Frontier Economics, December 2020) for Climate Zone 2 (Brisbane), supplemented by Brisbane-specific estimates from multiple industry sources.</div>
             </div>
 
             <div style={{ marginBottom: 16 }}>
