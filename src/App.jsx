@@ -123,10 +123,10 @@ export default function App() {
       {/* Header */}
       <div style={{ background: "linear-gradient(135deg, rgba(56,72,66,0.2) 0%, rgba(15,22,28,0) 60%)", borderBottom: "1px solid rgba(255,255,255,0.05)", padding: "48px 24px 40px" }}>
         <div style={{ maxWidth: 880, margin: "0 auto" }}>
-          <div className="sans" style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: "#A8BFA8", marginBottom: 10, fontWeight: 600 }}>Body Corporate Electricity Cost Analysis</div>
+          <div className="sans" style={{ fontSize: 11, letterSpacing: 2.5, textTransform: "uppercase", color: "#A8BFA8", marginBottom: 10, fontWeight: 600 }}>Northmarque – Electricity cost analysis</div>
           <h1 style={{ fontSize: 30, fontWeight: 400, lineHeight: 1.25, margin: "0 0 12px", color: "#FFFDF5" }}>Is our embedded network saving owners money?</h1>
           <p className="sans" style={{ fontSize: 15, color: "#9D9A9B", margin: 0, lineHeight: 1.65, maxWidth: 660 }}>
-            Compare your current Altogether Group rates against every fixed-rate retail plan available on Energy Made Easy for Carseldine, 4034. Select a provider and household size to explore.
+            Compare your current Altogether Group rates against the 10 next cheapest retail plans available on <a href="https://www.energymadeeasy.gov.au/">Energy Made Easy</a> for Carseldine, 4034. Select a provider and household size to explore.
           </p>
         </div>
       </div>
