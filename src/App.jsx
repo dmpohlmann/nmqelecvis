@@ -4,15 +4,15 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 const ALTOGETHER = { name: "Altogether Group", supply: 0.89, usage: 0.26, color: "#384741" };
 
 const PROVIDERS = [
-  { name: "Residential Classic", supply: 1.31, usage: 0.29, color: "#E68E8A" },
-  { name: "Nectr Home Basic", supply: 1.2283, usage: 0.2871, color: "#E4C071" },
-  { name: "HomeDeal Select", supply: 1.2935, usage: 0.2839, color: "#7A3B4E" },
-  { name: "Kogan Energy (FIRST)", supply: 1.2271, usage: 0.2898, color: "#5B7B8A" },
-  { name: "Residential Seniors Saver", supply: 1.1508, usage: 0.2952, color: "#C47B5A" },
-  { name: "BOOST Residential", supply: 1.43, usage: 0.3399, color: "#F7F3EB" },
-  { name: "Sumo Sunrise", supply: 1.18, usage: 0.30, color: "#A8BFA8" },
-  { name: "Warm Welcome (Momentum)", supply: 1.7018, usage: 0.2728, color: "#9D9A9B" },
-  { name: "The Free 3 Plan", supply: 1.155, usage: 0.3806, color: "#6A7D70" },
+  { name: "Energy Locals", supply: 1.31, usage: 0.29, color: "#E68E8A" },
+  { name: "Nectr Energy", supply: 1.2283, usage: 0.2871, color: "#E4C071" },
+  { name: "Alinta Energy", supply: 1.2935, usage: 0.2839, color: "#7A3B4E" },
+  { name: "Kogan Energy", supply: 1.2271, usage: 0.2898, color: "#5B7B8A" },
+  { name: "AGL", supply: 1.1508, usage: 0.2952, color: "#C47B5A" },
+  { name: "GloBird Energy", supply: 1.43, usage: 0.3399, color: "#F7F3EB" },
+  { name: "Sumo", supply: 1.18, usage: 0.30, color: "#A8BFA8" },
+  { name: "Momentum Energy", supply: 1.7018, usage: 0.2728, color: "#9D9A9B" },
+  { name: "OVO Energy", supply: 1.155, usage: 0.3806, color: "#6A7D70" },
 ];
 
 const SEASONS = [
